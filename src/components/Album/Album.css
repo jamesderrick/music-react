@@ -1,0 +1,12 @@
+.album {
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+
+.album ol {
+    display: inline-block;
+}
+
+.album ol li {
+    padding: 5px 0;
+}

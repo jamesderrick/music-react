@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
-import LikeButton from './LikeButton';
+import LikeButton from '../LikeButton/LikeButton';
+import './Song.css';
 
 const Song = (props) => {
 

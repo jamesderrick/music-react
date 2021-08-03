@@ -1,6 +1,7 @@
 import React from 'react';
-import Album from './Album';
-import data from '../data.json';
+import Album from '../Album/Album';
+import data from '../../data.json';
+import './Artist.css'
 
 const renderAlbums = (specificArtist) => {
     const albums = []

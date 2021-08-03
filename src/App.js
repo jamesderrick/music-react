@@ -1,5 +1,5 @@
 import React from 'react';
-import Artist from './components/Artist';
+import Artist from './components/Artist/Artist';
 import data from './data.json';
 import './style.css';
 

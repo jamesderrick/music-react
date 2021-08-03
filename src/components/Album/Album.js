@@ -1,6 +1,7 @@
 import React from 'react';
-import data from '../data.json';
-import Song from './Song';
+import data from '../../data.json';
+import Song from '../Song/Song';
+import './Album.css';
 
 const renderSongs = (specificArtist, specificAlbum) => {
     const songsArray = [];
