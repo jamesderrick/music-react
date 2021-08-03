@@ -1,0 +1,88 @@
+[
+    {
+        "artist": "Linkin Park",
+        "genre": "Nu Metal",
+        "intro": "Linkin Park is an American rock band from Agoura Hills, California. The band's current lineup comprises vocalist/rhythm guitarist/keyboardist Mike Shinoda, lead guitarist Brad Delson, bassist Dave Farrell, DJ/turntablist Joe Hahn and drummer Rob Bourdon, all of whom are founding members. Vocalists Mark Wakefield and Chester Bennington are former members of the band.",
+        "albums": [
+            {
+                "title": "Hybrid Theory",
+                "artwork": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4hX5XH0QYLX90helch4G6ZzOTpcXOXNhQQx045yE&usqp=CAE&s",
+                "year": "2000",
+                "songs": [
+                    {
+                        "title": "Papercut",
+                        "liked": false
+                    },
+                    {
+                        "title": "One Step Closer",
+                        "liked": false
+                    }
+                ]
+            },
+            {
+                "title": "Meteora",
+                "artwork": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBGAQRWcjNQ6jqeH6YK9eMYJFZp37EPopOCfu6_h8&usqp=CAE&s",
+                "year": "2003",
+                "songs": [
+                    {
+                        "title": "Forword",
+                        "liked": false
+                    },
+                    {
+                        "title": "Don't Stay",
+                        "liked": false
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "artist": "Journey",
+        "genre": "Rock",
+        "intro": "Journey is an American rock band formed in San Francisco in 1973 by former members of Santana, Steve Miller Band, and Frumious Bandersnatch.",
+        "albums": [
+            {
+                "title": "Journey",
+                "artwork": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQubINSnAcm3NJTAsHPumFYF1QL7_yUTSe2bv3NjgA&usqp=CAE&s",
+                "year": "1975",
+                "songs": [
+                    {
+                        "title": "Of A Lifetime",
+                        "liked": false
+                    },
+                    {
+                        "title": "In The Morning Day",
+                        "liked": false
+                    },
+                    {
+                        "title": "Kohoutek",
+                        "liked": false
+                    },
+                    {
+                        "title": "To Play Some Magic",
+                        "liked": false
+                    }
+                ]
+            },
+            {
+                "title": "Escape",
+                "artwork": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIAeSZ-segclR-mESBTIMnnwiWT8tDxnXkILaM27U&usqp=CAE&s",
+                "year": "1981",
+                "songs": [
+                    {
+                        "title": "Don't Stop Believin'",
+                        "liked": false
+                    },
+                    {
+                        "title": "Stone In Love",
+                        "liked": false
+                    },
+                    {
+                        "title": "Who's Crying Now",
+                        "liked": false
+                    }
+                ]
+            }
+        ]
+    }
+]

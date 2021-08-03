@@ -1,0 +1,31 @@
+.song-liked {
+    background-color: green;
+}
+
+.artist {
+    padding: 0 40px;
+}
+
+.artist ul {
+    list-style: none;
+    padding: 0;
+}
+
+.album {
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+
+.album ol {
+    display: inline-block;
+}
+
+.album ol li {
+    padding: 5px 0;
+}
+
+button {
+    padding: 0 20px;
+    margin-left: 10px;
+    float: right;
+}
