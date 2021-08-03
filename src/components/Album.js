@@ -9,7 +9,7 @@ const renderSongs = (specificArtist, specificAlbum) => {
     albumData.songs.forEach((song,index) => {
         songsArray.push(
         <li key={index}>
-            <Song title={song.title}/>
+            <Song title={song.title} liked={song.liked}/>
         </li>
         )
     })

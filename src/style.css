@@ -29,3 +29,7 @@ button {
     margin-left: 10px;
     float: right;
 }
+
+.song {
+    min-width: 300px;
+}

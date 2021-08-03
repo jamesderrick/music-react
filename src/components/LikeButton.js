@@ -1,19 +1,11 @@
 import React, {useState} from 'react';
 
-const LikeButton = () => {
-
-    const [clicked, setClicked] = useState(false);
-
-    const pressed = () => {
-        if(clicked) {
-            setClicked(false)
-        } else {
-            setClicked(true)
-        }
-    }
+const LikeButton = (props) => {
 
     return (
-        <button className={clicked ? 'song-liked' : ''} onClick={pressed}>Like</button>
+        <button className={props.isLiked ? 'song-liked' : ''} onClick={() => props.updateLike()}>
+                {props.isLiked ? 'Unlike' : 'Like'}
+        </button>
     )
 }
 
