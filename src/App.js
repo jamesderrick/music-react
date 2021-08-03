@@ -1,5 +1,7 @@
 import React from 'react';
+import Header from './layout/Header/Header';
 import Artist from './components/Artist/Artist';
+import Footer from './layout/Footer/Footer';
 import data from './data.json';
 import './style.css';
 
@@ -25,7 +27,9 @@ const renderArtist = () => {
 const App = () => {
     return (
         <>
+        <Header />
         {renderArtist()}
+        <Footer />
         </>
     )
 };

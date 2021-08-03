@@ -21,9 +21,9 @@ const renderAlbums = (specificArtist) => {
 const Artist = (props) => {
     return (
         <>
-            <h1>Artist: {props.name}</h1>
-            <h6>Genre: {props.genre}</h6>
-            <p>Intro: {props.intro}</p>
+            <h1><span>Artist: </span>{props.name}</h1>
+            <h6><span>Genre: </span>{props.genre}</h6>
+            <p><span>Introduction: </span>{props.intro}</p>
             <ul>
                 {renderAlbums(props.name)}
             </ul>

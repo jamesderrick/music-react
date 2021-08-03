@@ -1,0 +1,9 @@
+footer {
+    background-color: lightgray;
+    text-align: center;
+    padding: 5px 20px;
+}
+
+footer p em {
+    font-size: 12px;
+}
