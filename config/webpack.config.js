@@ -13,7 +13,10 @@ const config = {
     },
     mode: 'development',
     resolve: {
-        modules: [path.resolve('node_modules'), 'node_modules']
+        modules: [path.resolve('node_modules'), 'node_modules'],
+        alias: {
+            'path-to-regexp': path.resolve(ROOT_DIRECTORY, 'node_modules', 'react-router', 'node_modules', 'path-to-regexp')
+        },
     },
     performance: {
         hints: false
