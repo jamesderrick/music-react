@@ -13,7 +13,7 @@ const Album = (props) => {
         data.songs.forEach((song,index) => {
             songsArray.push(
             <li key={index}>
-                <Song title={song.title} liked={song.liked} artist={specificArtist} album={specificAlbum}/>
+                <Song title={song.title} liked={song.liked} artist={specificArtist} album={specificAlbum} changeLike={props.changeLike}/>
             </li>
             )
         })

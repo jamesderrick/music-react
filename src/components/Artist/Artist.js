@@ -14,7 +14,7 @@ const Artist = (props) => {
             <li className="album" key={index}>
                 <h2>{album.title} ({album.year})</h2> 
                 <img src={album.artwork}></img>
-                <Album artist={specificArtist} album={album.title} data={album}/>
+                <Album artist={specificArtist} album={album.title} data={album} changeLike={props.changeLike}/>
             </li>
             )
         })

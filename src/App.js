@@ -26,7 +26,25 @@ const App = () => {
             }
         }
         fetchInfo()
-    }, [])
+    }, [info])
+
+    function songLikeChanged(artist,album,song,status) {
+        console.log('Like changed')
+
+        try {
+            const { data } = axios.post('https://react-music-demo.herokuapp.com/', {
+                status: status,
+                artist: artist,
+                album: album,
+                song: song
+            })
+        } catch (err) {
+            console.log(err)
+        }
+
+        const newInfo = [...info];
+        setInfo(newInfo)
+    }
 
     const artists = [];
 
@@ -38,6 +56,7 @@ const App = () => {
                 genre={artist.genre}
                 intro={artist.intro}
                 data={artist}
+                changeLike={songLikeChanged}
             />
             <hr></hr>
             </div>)
