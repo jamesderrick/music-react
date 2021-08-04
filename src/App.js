@@ -4,6 +4,7 @@ import { Switch, Route } from 'react-router-dom';
 import Header from './layout/Header/Header';
 import Welcome from './layout/Welcome/Welcome';
 import Artist from './components/Artist/Artist';
+import About from './layout/About/About';
 import NotFound from './layout/NotFound/NotFound';
 import Footer from './layout/Footer/Footer';
 //import data from './data.json';
@@ -56,6 +57,9 @@ const App = () => {
             </Route>
             <Route exact path="/artists">
                 {renderArtist(info)}
+            </Route>
+            <Route exact path="/about">
+                <About />
             </Route>
             <Route path="/">
                 <NotFound />
