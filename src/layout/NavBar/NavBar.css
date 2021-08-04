@@ -1,0 +1,20 @@
+nav {
+    position: relative;
+    padding: 10px 40px;
+    height: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    margin-right: 20px;
+}
+
+nav a:hover {
+    border-bottom: 2px solid white;
+}
+
+nav .active {
+    border-bottom: 2px solid white;
+}

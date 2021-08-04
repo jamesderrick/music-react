@@ -11,6 +11,8 @@ button {
     border-radius: 5px;
     min-width: 100px;
     cursor: pointer;
+    box-shadow: none;
+    transition: box-shadow 0.5s;
 }
 
 button:hover {

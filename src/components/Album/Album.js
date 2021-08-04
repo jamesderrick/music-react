@@ -1,27 +1,28 @@
 import React from 'react';
-import data from '../../data.json';
+//import data from '../../data.json';
 import Song from '../Song/Song';
 import './Album.css';
 
-const renderSongs = (specificArtist, specificAlbum) => {
-    const songsArray = [];
-    const artistData = data.find(element => element.artist === specificArtist)
-    const albumData = artistData.albums.find(element => element.title === specificAlbum)
-    albumData.songs.forEach((song,index) => {
-        songsArray.push(
-        <li key={index}>
-            <Song title={song.title} liked={song.liked}/>
-        </li>
-        )
-    })
-    return songsArray
-}
-
 
 const Album = (props) => {
+
+    const renderSongs = (specificArtist, specificAlbum, data) => {
+        const songsArray = [];
+        //const artistData = data.find(element => element.artist === specificArtist)
+        //const albumData = artistData.albums.find(element => element.title === specificAlbum)
+        data.songs.forEach((song,index) => {
+            songsArray.push(
+            <li key={index}>
+                <Song title={song.title} liked={song.liked} artist={specificArtist} album={specificAlbum}/>
+            </li>
+            )
+        })
+        return songsArray
+    }
+
     return (
         <ol>
-            {renderSongs(props.artist, props.album)}
+            {renderSongs(props.artist, props.album, props.data)}
         </ol>
     )
 }

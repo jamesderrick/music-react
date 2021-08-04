@@ -1,9 +1,13 @@
-nav {
+header {
     background-color: #313639;
-    padding: 5px 20px;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 130px;
 }
 
-nav h1 {
+header h1 {
     color: white;
     text-align: center;
+    margin: 10px 0;
 }
