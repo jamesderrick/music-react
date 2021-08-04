@@ -1,11 +1,14 @@
 import React from 'react';
 import './Welcome.css';
+import {Link} from 'react-router-dom';
 
 const Welcome = () => {
     return (
         <div className="heading">
             <h1>Welcome!</h1>
-            <img src="https://i.redd.it/1fmq843ih1o51.png"></img>
+            <Link to="/artists">
+                <img src="https://i.redd.it/1fmq843ih1o51.png"></img>
+            </Link>
         </div>
     )
 }
