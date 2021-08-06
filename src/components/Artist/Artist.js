@@ -15,7 +15,7 @@ const Artist = () => {
     useEffect(() => {
         const fetchInfo = async () => {
             try {
-                const { data } = await axios.get(`https://react-music-demo.herokuapp.com/${params.id}`)
+                const { data } = await axios.get(`https://react-music-demo.herokuapp.com/artist/${params.id}`)
                 setArtistInfo(data)
             } catch(err) {
                 console.log(err)
