@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 
 const Welcome = () => {
     return (
-        <div className="heading">
+        <div role="heading" className="heading">
             <h1>Welcome!</h1>
             <Link to="/artists">
                 <img src="https://i.redd.it/1fmq843ih1o51.png"></img>

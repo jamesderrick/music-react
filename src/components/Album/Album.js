@@ -1,19 +1,22 @@
 import React from 'react';
-//import data from '../../data.json';
 import Song from '../Song/Song';
 import './Album.css';
 
 
 const Album = (props) => {
 
-    const renderSongs = (specificArtist, specificAlbum, data) => {
+    const renderSongs = (songs) => {
         const songsArray = [];
-        //const artistData = data.find(element => element.artist === specificArtist)
-        //const albumData = artistData.albums.find(element => element.title === specificAlbum)
-        data.songs.forEach((song,index) => {
+
+        songs.forEach((song,index) => {
             songsArray.push(
             <li key={index}>
-                <Song title={song.title} liked={song.liked} artist={specificArtist} album={specificAlbum} changeLike={props.changeLike}/>
+                <Song 
+                    trackName={song.title} 
+                    liked={song.liked} 
+                    url={`${props.url}/${song.title}`}
+                    handleLikeButtonClick={props.handleLikeButtonClick}
+                />
             </li>
             )
         })
@@ -21,9 +24,13 @@ const Album = (props) => {
     }
 
     return (
+        <>
+        <h2>{props.title} ({props.year})</h2>
+        <img src={props.artwork}></img>
         <ol>
-            {renderSongs(props.artist, props.album, props.data)}
+            {renderSongs(props.songs)}
         </ol>
+        </>
     )
 }
 

@@ -10,3 +10,8 @@
 .album ol li {
     padding: 5px 0;
 }
+
+.album img {
+    height: 150px;
+    width: 150px;
+}

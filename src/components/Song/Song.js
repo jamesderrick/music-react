@@ -1,36 +1,22 @@
-import React, {useState, useEffect} from 'react';
-import axios from 'axios';
+import React, { useState } from 'react';
 import LikeButton from '../LikeButton/LikeButton';
 import './Song.css';
 
+import axios from 'axios';
+
 const Song = (props) => {
 
-    const [songLiked, setSongLiked] = useState(props.liked);
-    const [count, setCount] = useState(0);
+    const [isLiked, setIsLiked] = useState(props.liked);
 
-    // const handleLike = () => {
-    //     setSongLiked(!songLiked)
-
-    //     const updateLike = async () => {
-    //         console.log(songLiked)
-    //         try {
-    //             const { data } = await axios.post('https://react-music-demo.herokuapp.com/', {
-    //                 status: songLiked,
-    //                 artist: props.artist,
-    //                 album: props.album,
-    //                 song: props.title
-    //             })
-    //         } catch (err) {
-    //             console.log(err)
-    //         }
-    //     }
-    //     updateLike()
-    // }
+    const handleLike = () => {
+        setIsLiked(prev => !prev)
+        props.handleLikeButtonClick(props.url,!isLiked)
+    }
 
     return (
         <div className="song">
-            {props.title}
-            <LikeButton isLiked={props.liked} changeLike={props.changeLike} artist={props.artist} album={props.album} song={props.title}/>
+            {props.trackName}
+            <LikeButton isLiked={isLiked} toggleIsLiked={handleLike}/>
         </div>
     )
 }

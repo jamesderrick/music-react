@@ -1,35 +1,77 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
+import { useParams } from 'react-router-dom';
 import Album from '../Album/Album';
-//import data from '../../data.json';
 import './Artist.css'
 
+const axios = require('axios');
 
-const Artist = (props) => {
+const Artist = () => {
 
-    const renderAlbums = (specificArtist, data) => {
+    const [artistInfo, setArtistInfo] = useState([]);
+    const [update, setUpdate] = useState(false);
+
+    const params = useParams();
+
+    useEffect(() => {
+        const fetchInfo = async () => {
+            try {
+                const { data } = await axios.get(`https://react-music-demo.herokuapp.com/${params.id}`)
+                setArtistInfo(data)
+            } catch(err) {
+                console.log(err)
+            }
+        }
+        fetchInfo()
+    }, [update])
+
+    function handleLikeButtonClick(url,status) {
+
+        try {
+            const { data } = axios.post('https://react-music-demo.herokuapp.com/', {
+                status: status,
+                artist: url.split('/')[0],
+                album: url.split('/')[1],
+                song: url.split('/')[2]
+            })
+        } catch (err) {
+            console.log(err)
+        }
+        setUpdate(!update)
+
+    }
+
+    const renderAlbums = (data) => {
         const albums = []
-        //const artist = data.find(element => element.artist === specificArtist)
-        data.albums.forEach((album,index) => {
-            albums.push(
-            <li className="album" key={index}>
-                <h2>{album.title} ({album.year})</h2> 
-                <img src={album.artwork}></img>
-                <Album artist={specificArtist} album={album.title} data={album} changeLike={props.changeLike}/>
-            </li>
-            )
-        })
+
+        if(data.length !== 0) {
+            data.albums.forEach((album,index) => {
+                albums.push(
+                <li className="album" key={index}>
+                    <Album 
+                        title={album.title} 
+                        artwork={album.artwork} 
+                        year={album.year} 
+                        songs={album.songs}
+                        url={`${artistInfo.artist}/${album.title}`}
+                        handleLikeButtonClick={handleLikeButtonClick}
+                    />
+                    <hr></hr>
+                </li>
+                )
+            })
+        }
         return albums
     }
 
     return (
-        <>
-            <h1><span>Artist: </span>{props.name}</h1>
-            <h6><span>Genre: </span>{props.genre}</h6>
-            <p><span>Introduction: </span>{props.intro}</p>
+        <div className="artist">
+            <h1>{artistInfo.artist}</h1>
+            <h6>{artistInfo.genre}</h6>
+            <p>{artistInfo.intro}</p>
             <ul>
-                {renderAlbums(props.name, props.data)}
+                {renderAlbums(artistInfo)}
             </ul>
-        </>
+        </div>
     )
 }
 

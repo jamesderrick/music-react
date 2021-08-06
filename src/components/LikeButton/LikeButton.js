@@ -1,14 +1,14 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './LikeButton.css';
 
 const LikeButton = (props) => {
 
-    function changeLike() {
-        props.changeLike(props.artist,props.album,props.song,!props.isLiked)
+    function toggleStatus() {
+        props.toggleIsLiked()
     }
 
     return (
-        <button className={props.isLiked ? 'song-liked' : ''} onClick={changeLike}>
+        <button className={props.isLiked ? 'like-button song-liked' : 'like-button'} onClick={toggleStatus}>
                 {props.isLiked ? 'Unlike' : 'Like'}
         </button>
     )
