@@ -30,7 +30,7 @@ export default function ArtistList(props) {
                 <Card 
                     heading={artist.artist}
                     subHeading={artist.genre}
-                    content={artist.intro}
+                    content={artist.intro.length > 200 ? artist.intro.substring(0,200) + '...' : artist.intro}
                     button= {{
                         label: "View Albums",
                         link: `/artist/${artist.id}`
