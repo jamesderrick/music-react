@@ -14,7 +14,7 @@
 .card button {
     position: absolute;
     padding: 5px 20px;
-    margin: 20px;
+    margin: 20px 40px;
     bottom: 0px;
     right: 0px;
     border: none;
@@ -49,4 +49,10 @@
     background-color: darkgray;
     float: right;
     object-fit: cover;
+}
+
+.star-ratings {
+    position: absolute !important;
+    bottom: 20px;
+    left: 40px;
 }
