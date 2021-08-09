@@ -20,7 +20,7 @@ export default function ArtistList(props) {
         }
         fetchInfo()
         return () => { isLoading = false };
-    }, [info])
+    }, [])
 
     function updateRating(id,rating) {
         
