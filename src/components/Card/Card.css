@@ -41,3 +41,12 @@
     box-shadow: 5px 5px 5px #313639;
     transition: transform 1s, box-shadow 1s;
 }
+
+.card h1 img {
+    height: 70px;
+    width: 70px;
+    border-radius: 35px;
+    background-color: darkgray;
+    float: right;
+    object-fit: cover;
+}

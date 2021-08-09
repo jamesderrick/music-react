@@ -25,10 +25,12 @@ export default function ArtistList(props) {
     const artists = [];
 
     const renderArtistCards = (data) => {
+        console.log(data);
         data.forEach(artist => {
             artists.push(<div key={artist.id}>
                 <Card 
                     heading={artist.artist}
+                    image={artist.artist_img}
                     subHeading={artist.genre}
                     content={artist.intro.length > 200 ? artist.intro.substring(0,200) + '...' : artist.intro}
                     button= {{

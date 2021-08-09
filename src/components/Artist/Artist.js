@@ -65,7 +65,10 @@ const Artist = () => {
 
     return (
         <div className="artist">
-            <h1>{artistInfo.artist}</h1>
+            <h1>
+                {artistInfo.artist}
+                <img className="artist-img" src={artistInfo.artist_img} />
+            </h1>
             <h6>{artistInfo.genre}</h6>
             <p>{artistInfo.intro}</p>
             <ul>
